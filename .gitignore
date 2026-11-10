@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+data/
+*.sqlite
+*.sqlite-*

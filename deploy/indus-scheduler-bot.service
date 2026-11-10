@@ -1,0 +1,17 @@
+[Unit]
+Description=@indus/scheduler-bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=indus
+Group=indus
+WorkingDirectory=/opt/indus/indus-scheduler-bot
+EnvironmentFile=/opt/indus/.env
+ExecStart=/usr/bin/node --import tsx src/index.ts
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
